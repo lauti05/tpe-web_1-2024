@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css/estilocamisetas.css">
+</head>
+<body>
+    <header>
+        <p class="boton-menu">MENU</p>
+        <img class="logo" src="images/cdlogo.jpeg">
+        <h1 class="nombre-de-camisetas">CD Basquet</h1>
+        <nav>
+            <ul class="navegador">
+                <a href="inicio.html"><li class="item">INICIO</li></a>
+                <a href="contacto.html"><li class="item">CONTACTO</li></a>
+                <a href="promociones.html"><li class="item">PROMOCIONES</li></a>
+            </ul>
+        </nav>    
+    </header>
+    <img class="logo-principal" src="images/cdbasquet.jpeg" alt="logo">
+    <div class="contenedor-contacto">
+        
+        <h1 class="titulo-de-primernivel">Contacto</h1>
+        <div class="caja-promocion-o-contacto">
+            <ul class="lista-de-opciones-de-contacto">
+                <li class="opciones-lista">Para reservar,dar una sugerencia,hacer una consulta o reclamar complete el siguente formulario eligiendo la opcion deseada </li>
+                <li class="opciones-lista">Para realizar un pedido puede hacerlo mediante el formulario, llamando o mandando un mensaje a nuestro número </li>
+                <li class="opciones-lista">Tambien contamos con el servicio de Mercado Envios </li> 
+                <li class="opciones-lista">Para realizar una reserva se tiene que realizar con un minimo de 6hs de anticipacion</li>
+                <li id="lilogo"> <a href="https://www.whatsapp.com/?lang=es"> <img class="logo" src="images/logowhatsapp.png" alt="whatsapp"></a> <a href="https://envios.mercadolibre.com.ar/"><img class="logo" src="images/mercadoenvios.png" alt="mercadoenvios"></a></li>
+            </ul>
+    </div>
+        <div class="caja-promocion-o-contacto">
+            <form id="formulario-contacto">
+                Nombre y Apellido:<input type="text" name="nombres" value="" required />
+                Teléfono: <input id="control-2" type="number" name="telefonos" value="" required/>
+                DNI: <input type="number" name="documentos" value="" required maxlength="8"/>
+                Email: <input type="email" name="emails" value="" required />
+                Tipo: <select required>
+                        <option value="opcion1">Reservar</option>
+                        <option value="opcion2">Sugerencia</option>
+                        <option value="opcion3">Consulta</option>
+                        <option value="opcion4">Reclamar</option>
+                      </select>   
+                Descripcion:<textarea name="comentario" id="" cols="30" rows="10" >  
+                </textarea>
+                Captcha<input id="confirmacion" type="text" name="captcha" value=""/>
+                <input id="solucion" type="number"  name="respuesta" value=""/>
+                <button id="enviar">Enviar Formulario</button> 
+            </form>
+            
+            <p id="mensaje-de-comprobacion"></p>
+            <p id="mensaje-de-formulario-enviado"></p>
+            
+        </div>
+    </div>
+
+
+
+    <footer>
+        <h3 class="titulo">Nuestras redes sociales</h3>
+        <a href="https://twitter.com/home?lang=es" target="_blank"><img class="logo" src="images/logotwiter.png" alt="logotwiter"></a>
+        <a href="https://www.instagram.com/"><img class="logo" src="images/logoinsta.png" alt="logoinstagram"></a>
+        <a href="https://www.facebook.com/"><img class="logo" src="images/logofacebook.png" alt="logofacebook"></a>
+        <h3 class="titulo">©CD Basquet - Desarrollado por Thomas Barth e Ignacio Gonzalez</h3>
+    </footer>
+    <script type="text/javascript" src="js/main-camiseta.js"></script>
+    <script src="js/buttonMenu.js"></script>
+</body>
+</html>

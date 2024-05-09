@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promociones</title>
+    <link rel="stylesheet" href="css/estilocamisetas.css">
+</head>
+<body>
+    <header>
+        <p class="boton-menu">MENU</p>
+        <img class="logo" src="images/cdlogo.jpeg">
+        <h1 class="nombre-de-camisetas">CD Basquet</h1>
+        <nav>  
+            <ul class="navegador">
+                <a href="inicio.html"><li class="item">INICIO</li></a>
+                <a href="contacto.html"><li class="item">CONTACTO</li></a>
+                <a href="promociones.html"><li class="item">PROMOCIONES</li></a>
+            </ul>
+        </nav>      
+    </header>
+    <img class="logo-principal" src="images/cdbasquet.jpeg" alt="logo">
+    <article>
+        <h1 class="titulo-de-primernivel">Promociones:</h1>
+        
+        <section class="tabla">
+            <h2>Promociones</h2>
+            <p>A continuacion mostraremos las promociones en camisetas:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="tBordes">Descripcion</th>
+                        <th class="tBordes">Talle</th>
+                        <th class="tBordes">Precio</th>
+                    </tr>
+                </thead>
+                <tbody id="bodyTable">
+                </tbody>
+            </table>
+            <h5>Agregue camisetas:</h5>
+            <form action="">
+                <input id="descripcion" type="text" placeholder="Descripcion">
+                <input id="talle" type="numeric" placeholder="Talle">
+                <input id="precio" type="numeric" placeholder="Precio">
+                <button id="btnAgregar" type="submit">Agregar</button>
+                <button id="agregarTres" type="submit">Agregar Tres</button>
+                <button id="btnBorrar">Borrar Tabla</button>
+            </form>
+        </section>
+        
+    </article>
+    <footer>
+        <h3 class="titulo">Nuestras redes sociales</h3>
+        <a href="https://twitter.com/home?lang=es" target="_blank"><img class="logo" src="images/logotwiter.png" alt="logotwiter"></a>
+        <a href="https://www.instagram.com/"><img class="logo" src="images/logoinsta.png" alt="logoinstagram"></a>
+        <a href="https://www.facebook.com/"><img class="logo" src="images/logofacebook.png" alt="logofacebook"></a>
+
+    
+        <h3 class="titulo">©CD Basquet - Desarrollado por Thomas Barth e Ignacio Gonzalez</h3>
+    </footer>
+    <script src="js/buttonMenu.js"></script>
+    <script src="./js/tabla.js"></script>
+    
+</body>
+</html> 
