@@ -21,6 +21,8 @@ body h1 {
 
 header {
     background-color: #425c5a;
+    position: sticky;
+    top: 0;
 }
 
 header .seccion-logo-titulo{
@@ -146,6 +148,8 @@ table {
 
 @media (width >= 768) {
 
+
+    
 
     table{
         width: 10%;
