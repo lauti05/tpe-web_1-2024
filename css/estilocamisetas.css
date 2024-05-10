@@ -1,8 +1,6 @@
 
-
-
 body{
-    background-color: white;
+    background-color: rgba(127, 255, 212, 0.233);
     margin: 0;
 }
 
@@ -11,26 +9,25 @@ body{
     width: 90px;
 }
 
-
-
 .foto-d1eg0{
     width: 100%;
 }
 
+
+
 header {
-    background-color: white;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: 
-    "logo titulo btn-menu"
-    "lista-menu lista-menu lista-menu";
-    justify-items: center;
-    align-items: center;
-    
+    background-color: #425c5a;
 }
 
-.boton-menu {
-    grid-area: btn-menu;
+header .seccion-logo-titulo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+#boton-menu {
     width: 50px;
     height: 30px;
 }
@@ -40,27 +37,26 @@ header {
 }
 
 .menu.abrir{
-    grid-area: lista-menu;
-    display: inline-block;
+    display: flex;
+    background-color: rgb(36, 34, 34);
 }
 
 .menu.abrir li {
-    display: inline-flex;
+    list-style: none;
 }
 
-
-.menu.ul.a{
+.menu.abrir > ul a{
     text-decoration: none;
+    color: white;
 }
+
+
 
 .contenedor-home > h1 { 
-    color: black;
     text-align: center;
 }
 
-footer > h3 {
-    color: black
-}
+
 
 footer a img{
     height: 10%;
@@ -68,18 +64,21 @@ footer a img{
 }
 
 footer {
-    background-color: grey;
+    background-color: #425c5a;
+}
+
+.img-de-muestra {
+    width: 50%;
+    height: 50%;
 }
 
 
-
-
 .contenedor-camiseta{
-    width:60%;
-    height:15%;
+    width: 60%;
+    height: 15%;
     margin-right: 20%;
     margin-left: 20%;
-    border:3px solid #000000;
+    border: 3px solid #000000;
     background: #ffffff;
     margin-top: 1%;
 }
@@ -91,32 +90,34 @@ footer {
     height: 100%;
 }
 
+.contenedor-camiseta h2 {
+    text-align: center;
+}
+
+
+
 .contenedor-fin-pagina {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-areas: 
-    "logo horarios" 
-    "contacto contacto";
+    display: flex;
+    align-items: center;
 }
 
-.contenedor-fin-pagina > p {
-    grid-area:  contacto;
+#link-contacto-pie-de-pag {
+    color: black;
+    font-style: italic;
 }
 
-.contenedor-fin-pagina > h2 { 
-    grid-area: horarios;
-    align-content: center;
+.talles {
+    font-weight: bold;
 }
-
-
 
 
 
 
 
 @media (width >= 768) {
+
     
-    .nombre-de-camisetas{
+    /*.nombre-de-camisetas{
         font-family:'Josefin Sans', sans-serif;
 
     }
@@ -340,10 +341,6 @@ footer {
     }
 
 
-}
-
-
-/*@media only screen and (min-width:660px){
     .boton-menu{
         display: none;
     }
@@ -351,8 +348,8 @@ footer {
     .navegador{
         flex-direction: row;
         display: flex;
-    }
+    }*/
 
-}*/
+}
 
 
