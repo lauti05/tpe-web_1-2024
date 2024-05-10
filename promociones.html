@@ -7,60 +7,81 @@
     <title>Promociones</title>
     <link rel="stylesheet" href="css/estilocamisetas.css">
 </head>
+
 <body>
-    <header>
-        <p class="boton-menu">MENU</p>
-        <img class="logo" src="images/cdlogo.jpeg">
-        <h1 class="nombre-de-camisetas">CD Basquet</h1>
-        <nav>  
-            <ul class="navegador">
-                <a href="index.html"><li class="item">INICIO</li></a>
-                <a href="contacto.html"><li class="item">CONTACTO</li></a>
-                <a href="promociones.html"><li class="item">PROMOCIONES</li></a>
+
+    <header>    
+        <div class="seccion-logo-titulo">
+            <a href="index.html"><img class="logo-pag" src="images/logo.png"></a>
+            <h1>CamisetasRetro</h1>
+            <button id="boton-menu">Menú</button>
+        </div>
+
+        <nav class="menu">
+            <ul>
+                <li> <a href="index.html">Inicio</a> </li>
+                <li> <a href="contacto.html">Contacto</a> </li>
+                <li> <a href="promociones.html">Promociones</a> </li>          
             </ul>
-        </nav>      
+        </nav>
     </header>
-    <img class="logo-principal" src="images/cdbasquet.jpeg" alt="logo">
-    <article>
-        <h1 class="titulo-de-primernivel">Promociones:</h1>
-        
-        <section class="tabla">
-            <h2>Promociones</h2>
-            <p>A continuacion mostraremos las promociones en camisetas:</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th class="tBordes">Descripcion</th>
-                        <th class="tBordes">Talle</th>
-                        <th class="tBordes">Precio</th>
-                    </tr>
-                </thead>
-                <tbody id="bodyTable">
-                </tbody>
-            </table>
-            <h5>Agregue camisetas:</h5>
-            <form action="">
-                <input id="descripcion" type="text" placeholder="Descripcion">
-                <input id="talle" type="numeric" placeholder="Talle">
-                <input id="precio" type="numeric" placeholder="Precio">
-                <button id="btnAgregar" type="submit">Agregar</button>
-                <button id="agregarTres" type="submit">Agregar Tres</button>
-                <button id="btnBorrar">Borrar Tabla</button>
-            </form>
-        </section>
-        
-    </article>
+    
+    
+    <section>
+        <h2>Promociones</h2>
+        <table>
+            
+            <thead>
+                <tr>
+                    <th>Camiseta</th>
+                    <th>Talle</th>
+                    <th>Precio</th>
+                    <th>Foto</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Argentina '94</td>
+                    <td>M, L</td>
+                    <td>$30.000</td>
+                    <td class="columna-foto"><img src="/images/argentina94.png"></td>
+                </tr>
+                <tr>
+                    <td>Racing '91</td>
+                    <td>L, XL</td>
+                    <td>$24.900</td>
+                    <td class="columna-foto"><img class="imagen-promocion" src="/images/racing-retro.png"></td>
+                </tr>
+                <tr>
+                    <td>San Lorenzo '85</td>
+                    <td>M, L, XL</td>
+                    <td>$24.900</td>
+                    <td class="columna-foto"><img class="imagen-promocion" src="/images/sanlorenzo-retro.png"></td>
+                </tr>
+                <tr>
+                    <td>Independiente '97/'98</td>
+                    <td>S, M</td>
+                    <td>$23.500</td>
+                    <td class="columna-foto"><img class="imagen-promocion" src="/images/independiente-retro.png"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
     <footer>
         <h3 class="titulo">Nuestras redes sociales</h3>
-        <a href="https://twitter.com/home?lang=es" target="_blank"><img class="logo" src="images/logotwiter.png" alt="logotwiter"></a>
-        <a href="https://www.instagram.com/"><img class="logo" src="images/logoinsta.png" alt="logoinstagram"></a>
-        <a href="https://www.facebook.com/"><img class="logo" src="images/logofacebook.png" alt="logofacebook"></a>
 
-    
-        <h3 class="titulo">©CD Basquet - Desarrollado por Thomas Barth e Ignacio Gonzalez</h3>
+        <a href="https://twitter.com/home?lang=es" target="_blank"><img src="/images/logotwiter.png" alt="logotwiter"></a>
+
+        <a href="https://www.instagram.com/"><img src="/images/logoinsta.png" alt="logoinstagram"></a>
+
+        <a href="https://www.facebook.com/"><img src="/images/logofacebook.png" alt="logofacebook"> </a>
+
+        <h3 class="titulo">© CamisetasRetro - Desarrollado por Thomas Barth y Lautaro Acosta</h3>
     </footer>
-    <script src="js/buttonMenu.js"></script>
-    <script src="./js/tabla.js"></script>
+    
+    <script src="js/boton-menu.js"></script>
     
 </body>
 </html> 

@@ -1,6 +1,8 @@
+"use strict"
+
 document.addEventListener("DOMContentLoaded", 
 function(){
-    "use strict";
+    
         let camisetas = [
         {
             "descripcion": "San Antonio Spurs - Emanuel Ginobili",

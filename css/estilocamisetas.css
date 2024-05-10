@@ -4,6 +4,10 @@ body{
     margin: 0;
 }
 
+body h1 {
+    color: rgb(29, 28, 28);
+}
+
 .logo-pag {
     height: 90px;
     width: 90px;
@@ -79,7 +83,7 @@ footer {
     margin-right: 20%;
     margin-left: 20%;
     border: 3px solid #000000;
-    background: #ffffff;
+    background: #fffafa;
     margin-top: 1%;
 }
 
@@ -106,16 +110,47 @@ footer {
     font-style: italic;
 }
 
+
+
 .talles {
     font-weight: bold;
 }
 
 
 
+.columna-foto {
+    width: 70px;
+    border: none;
+}
+
+.columna-foto > img {
+    width: 155px;
+    height: 155px;
+}
+
+
+
+td {
+    border: solid 1px;
+    text-align: center;
+}
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
 
 
 @media (width >= 768) {
 
+
+    table{
+        width: 10%;
+        border-collapse: separate;
+    }
     
     /*.nombre-de-camisetas{
         font-family:'Josefin Sans', sans-serif;
