@@ -1,6 +1,9 @@
-document.querySelector(".boton-menu").addEventListener("click",mostrarmenu);
+"uses strict"
 
-function mostrarmenu()
-{
-    document.querySelector(".navegador ").classList.toggle("mostrar");
+let btn_menu = document.querySelector("#boton-menu");
+
+btn_menu.addEventListener("click", mostrarmenu);
+
+function mostrarmenu(){
+    document.querySelector(".menu").classList.toggle("abrir");
 }
