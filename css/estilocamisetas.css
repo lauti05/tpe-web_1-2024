@@ -1,11 +1,8 @@
+/*** ESTILO GENERAL ***/
 
 body{
     background-color: rgba(127, 255, 212, 0.233);
     margin: 0;
-}
-
-body h1 {
-    color: rgb(29, 28, 28);
 }
 
 .logo-pag {
@@ -13,29 +10,35 @@ body h1 {
     width: 90px;
 }
 
-.foto-d1eg0{
-    width: 100%;
-}
-
-
-
 header {
-    background-color: #425c5a;
     position: sticky;
     top: 0;
 }
 
-header .seccion-logo-titulo{
+header .contenedor-logo-titulo-btn {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
+header .contenedor-logo-titulo-btn h1{
+    font-style: oblique;
+}
+
+header, #boton-menu {
+    background-color: #447179;
+}
 
 #boton-menu {
     width: 50px;
     height: 30px;
+    border-style: none;
+}
+
+#boton-menu > img {
+    width: 120%;
+    height: 115%;
 }
 
 .menu{
@@ -56,55 +59,76 @@ header .seccion-logo-titulo{
     color: white;
 }
 
+footer {
+    background-color: #425c5a;
+    display: flex;
+    flex-direction: column;
+}
+
+footer > h4 {
+    margin-top: 0;
+    margin-bottom: 3px;
+}
+
+footer > h4 ~ h4 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
 
 
-.contenedor-home > h1 { 
+footer .redes-sociales{
+    display: flex;
+    column-gap: 5px;
+}
+
+footer .redes-sociales img {
+    width: 30px;
+}
+
+/*** FIN ESTILO GENERAL ***/
+
+
+
+/*** ESTILO INDEX.HTML ***/
+
+.foto-d1eg0{
+    width: 100%;
+}
+
+.contenedor-home, .contenedor-camiseta {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-home > h1, .contenedor-camiseta > h2 {
     text-align: center;
 }
 
-
-
-footer a img{
-    height: 10%;
-    width: 10%;
+.contenedor-home { 
+    align-items: center;
+    row-gap: 10px;
 }
-
-footer {
-    background-color: #425c5a;
-}
-
-.img-de-muestra {
-    width: 50%;
-    height: 50%;
-}
-
 
 .contenedor-camiseta{
-    width: 60%;
-    height: 15%;
-    margin-right: 20%;
-    margin-left: 20%;
-    border: 3px solid #000000;
-    background: #fffafa;
-    margin-top: 1%;
+    flex-wrap: wrap;
+    width: 50%;
+    border: 2px solid #000000;
+    background: whitesmoke;
 }
 
-.contenedor-camiseta > img {
-    display: flex;
-    justify-content: center;
+.contenedor-camiseta img {
     width: 100%;
     height: 100%;
 }
 
-.contenedor-camiseta h2 {
-    text-align: center;
+.contenedor-camiseta .talles {
+    font-weight: bold;
 }
-
-
 
 .contenedor-fin-pagina {
     display: flex;
     align-items: center;
+    justify-content: start;
 }
 
 #link-contacto-pie-de-pag {
@@ -112,13 +136,26 @@ footer {
     font-style: italic;
 }
 
+/*** FIN ESTILO INDEX.HTML ***/
 
 
-.talles {
-    font-weight: bold;
+
+/*** ESTILO PROMOCIONES.HTML ***/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
+td {
+    border: solid 1px;
+    text-align: center;
+    width: 15%;
+}
 
+tr {
+    border: solid 1.5px;
+}
 
 .columna-foto {
     width: 70px;
@@ -130,41 +167,70 @@ footer {
     height: 155px;
 }
 
-
-
-td {
-    border: solid 1px;
-    text-align: center;
+#precio-viejo {
+    text-decoration: line-through;
+    line-height: 1.7em
 }
 
-
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
+/*** FIN ESTILO PROMOCIONES.HTML ***/
 
 
 
-/* style contacto.html */
+/*** ESTILO CONTACTOL.HTML ***/
 
 .seccion-wsp img{
-    width: 20%;
-    height: 20%;
+    width: 15%;
+    height: 15%;
 }
 
 
 
 
-@media (width >= 768) {
+@media(width >= 768px) {
 
 
-    
+/*** ESTILO GENERAL ***/
 
-    table{
-        width: 10%;
-        border-collapse: separate;
+
+    .menu.abrir > ul li{
+        font-size: larger;
     }
+
+    footer {
+        align-items: center;
+    }
+    
+    footer > h4{
+        margin-top: 5px;
+    }
+
+    footer > h4 ~ h4 {
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+
+
+/*** ESTILO INDEX.HTML ***/
+
+.contenedor-home {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contenedor-camiseta{
+    width: 20%;
+}
+
+
+
+
+/*** ESTILO PROMOCIONES.HTML ***/
+
+
+
+}
     
     /*.nombre-de-camisetas{
         font-family:'Josefin Sans', sans-serif;
@@ -399,6 +465,5 @@ table {
         display: flex;
     }*/
 
-}
 
 

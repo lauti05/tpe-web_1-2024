@@ -11,22 +11,21 @@
 <body>
 
     <header>    
-        <div class="seccion-logo-titulo">
-            <a href="index.html"><img class="logo-pag" src="images/logo.png"></a>
+        <div class="contenedor-logo-titulo-btn">
+            <a href="index.html"><img class="logo-pag" src="./images/logos/logo.png"></a>
             <h1>CamisetasRetro</h1>
-            <button id="boton-menu">Menú</button>
+            <button id="boton-menu"><img src="./images/iconos/icono-menu.png"></button>
         </div>
 
         <nav class="menu">
             <ul>
                 <li> <a href="index.html">Inicio</a> </li>
-                <li> <a href="contacto.html">Contacto</a> </li>
-                <li> <a href="promociones.html">Promociones</a> </li>          
+                <li> <a href="promociones.html">Promociones</a> </li> 
+                <li> <a href="contacto.html">Contacto</a> </li>         
             </ul>
         </nav>
     </header>
-    
-    
+
     <section>
         <h2>Promociones</h2>
         <table>
@@ -44,41 +43,51 @@
                 <tr>
                     <td>Argentina '94</td>
                     <td>M, L</td>
-                    <td>$30.000</td>
-                    <td class="columna-foto"><img src="./images/argentina94.png"></td>
+                    <td>
+                        <span id="precio-viejo">$33.000</span>
+                        $30.000
+                    </td>
+                    <td class="columna-foto"><img src="./images/camisetas/argentina94.png"></td>
                 </tr>
                 <tr>
-                    <td>Racing '91</td>
+                    <td>Racing 1991</td>
                     <td>L, XL</td>
-                    <td>$24.900</td>
-                    <td class="columna-foto"><img class="imagen-promocion" src="./images/racing-retro.png"></td>
+                    <td>
+                        <span id="precio-viejo">$26.000</span>
+                        $24.900
+                    </td>
+                    <td class="columna-foto"><img class="imagen-promocion" src="./images/camisetas/racing-retro.png"></td>
                 </tr>
                 <tr>
-                    <td>San Lorenzo '85</td>
+                    <td>San Lorenzo 1985</td>
                     <td>M, L, XL</td>
-                    <td>$24.900</td>
-                    <td class="columna-foto"><img class="imagen-promocion" src="./images/sanlorenzo-retro.png"></td>
+                    <td>
+                        <span id="precio-viejo">$26.000</span>
+                        $24.900
+                    </td>
+                    <td class="columna-foto"><img class="imagen-promocion" src="./images/camisetas/sanlorenzo-retro.png"></td>
                 </tr>
                 <tr>
-                    <td>Independiente '97/'98</td>
+                    <td>Independiente 1997/1998</td>
                     <td>S, M</td>
-                    <td>$23.500</td>
-                    <td class="columna-foto"><img class="imagen-promocion" src="./images/independiente-retro.png"></td>
+                    <td>
+                        <span id="precio-viejo">$24.999</span>
+                        $23.500
+                    </td>
+                    <td class="columna-foto"><img class="imagen-promocion" src="./images/camisetas/independiente-retro.png"></td>
                 </tr>
             </tbody>
         </table>
     </section>
     
     <footer>
-        <h3 class="titulo">Nuestras redes sociales</h3>
-
-        <a href="https://twitter.com/home?lang=es" target="_blank"><img src="./images/logotwiter.png" alt="logotwiter"></a>
-
-        <a href="https://www.instagram.com/"><img src="./images/logoinsta.png" alt="logoinstagram"></a>
-
-        <a href="https://www.facebook.com/"><img src="./images/logofacebook.png" alt="logofacebook"> </a>
-
-        <h3 class="titulo">© CamisetasRetro - Desarrollado por Thomas Barth y Lautaro Acosta</h3>
+        <h4>Nuestras redes sociales</h4>
+        <section class="redes-sociales">
+            <a href="https://twitter.com/home?lang=es" target="_blank"><img src="./images/logos/logotwiter.png" alt="logotwiter"></a>
+            <a href="https://www.instagram.com/"><img src="./images/logos/logoinsta.png" alt="logoinstagram"></a>
+            <a href="https://www.facebook.com/"><img src="./images/logos/logofacebook.png" alt="logofacebook"> </a>
+        </section>
+        <h4 class="titulo">© CamisetasRetro - Desarrollado por Thomas Barth y Lautaro Acosta</h4>
     </footer>
     
     <script src="js/boton-menu.js"></script>
