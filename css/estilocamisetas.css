@@ -41,11 +41,11 @@ header, #boton-menu {
     height: 115%;
 }
 
-.menu{
+.menu {
     display: none;
 }
 
-.menu.abrir{
+.menu.abrir {
     display: flex;
     background-color: rgb(36, 34, 34);
 }
@@ -54,7 +54,7 @@ header, #boton-menu {
     list-style: none;
 }
 
-.menu.abrir > ul a{
+.menu.abrir > ul a {
     text-decoration: none;
     color: white;
 }
@@ -76,7 +76,7 @@ footer > h4 ~ h4 {
 }
 
 
-footer .redes-sociales{
+footer .redes-sociales {
     display: flex;
     column-gap: 5px;
 }
@@ -91,7 +91,7 @@ footer .redes-sociales img {
 
 /*** ESTILO INDEX.HTML ***/
 
-.foto-d1eg0{
+.foto-d1eg0 {
     width: 100%;
 }
 
@@ -109,7 +109,7 @@ footer .redes-sociales img {
     row-gap: 10px;
 }
 
-.contenedor-camiseta{
+.contenedor-camiseta {
     flex-wrap: wrap;
     width: 50%;
     border: 2px solid #000000;
@@ -178,7 +178,7 @@ tr {
 
 /*** ESTILO CONTACTOL.HTML ***/
 
-.seccion-wsp img{
+.seccion-wsp img {
     width: 15%;
     height: 15%;
 }
@@ -190,7 +190,6 @@ tr {
 
 
 /*** ESTILO GENERAL ***/
-
 
     .menu.abrir > ul li{
         font-size: larger;
@@ -213,21 +212,47 @@ tr {
 
 /*** ESTILO INDEX.HTML ***/
 
-.contenedor-home {
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
+    .contenedor-home {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 
-.contenedor-camiseta{
-    width: 20%;
-}
+    .contenedor-camiseta{
+        width: 20%;
+    }
 
 
 
 
 /*** ESTILO PROMOCIONES.HTML ***/
 
+    table{
+        width: 90%;
+        margin: auto;
+        margin-bottom: 5px;
+    }
+
+    tr {
+        font-size: larger;
+    }
+
+    td {
+        width: 5%;
+    }
+
+    .seccion-promociones h2{
+        font-size: xx-large;
+    }
+
+    .columna-foto {
+        width: 20%;
+    }
+
+    .columna-foto > img {
+        width: 50%;
+        height: 50%;
+    }
 
 
 }
