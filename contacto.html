@@ -27,39 +27,44 @@
         </nav>
     </header>
 
-    <h1>Contacto</h1>
+    <img class="foto-d1eg0" src="./images/maradona.webp" alt="logo">
 
-    <ul>
-        <li class="opciones-lista">Para reservar,dar una sugerencia,hacer una consulta o reclamar complete el siguente formulario eligiendo la opcion deseada </li>
-        <li class="opciones-lista">Para realizar un pedido puede hacerlo mediante el formulario, llamando o mandando un mensaje a nuestro número </li>
-        <li class="opciones-lista">Tambien contamos con el servicio de Mercado Envios </li>
-        <li class="opciones-lista">Para realizar una reserva se tiene que realizar con un minimo de 6hs de anticipacion</li>
-    </ul>
+    <h2>Contacto</h2>
 
-    <form id="formulario-contacto">
-        Nombre y Apellido:<input type="text" name="nombres" value="" required />
-        Teléfono: <input id="control-2" type="number" name="telefonos" value="" required />
-        DNI: <input type="number" name="documentos" value="" required maxlength="8" />
-        Email: <input type="email" name="emails" value="" required />
-        Tipo: <select required>
-            <option value="opcion1">Reservar</option>
-            <option value="opcion2">Sugerencia</option>
-            <option value="opcion3">Consulta</option>
-            <option value="opcion4">Reclamar</option>
-        </select>
-        Descripcion:<textarea name="comentario" id="" cols="30" rows="10">
+    <section class="contenedor-contacto">
+        
+        <main class="caja-contacto">
+            <ul class="lista-contacto">
+                <li class="opciones-lista">Para reservar,dar una sugerencia,hacer una consulta o reclamar complete el siguente formulario eligiendo la opcion deseada </li>
+                <li class="opciones-lista">Para realizar un pedido puede hacerlo mediante el formulario, llamando o mandando un mensaje a nuestro número </li>
+                <li class="opciones-lista">Tambien contamos con el servicio de Mercado Envios </li> 
+                <li class="opciones-lista">Para realizar una reserva se tiene que realizar con un minimo de 6hs de anticipacion</li>
+                <li id="lilogo"> <a href="https://www.whatsapp.com/?lang=es"> <img src="./images/logos/logowhatsapp.png" alt="whatsapp"></a> <a href="https://envios.mercadolibre.com.ar/"><img class="logo" src="./images/logos/mercadoenvios.png" alt="mercadoenvios"></a></li>
+            </ul>
+        </main>
+        <article class="caja-contacto">
+            <form id="formulario-contacto">
+                Nombre y Apellido:<input type="text" name="nombres" value="" required />
+                Teléfono: <input id="control-2" type="number" name="telefonos" value="" required/>
+                DNI: <input type="number" name="documentos" value="" required maxlength="8"/>
+                Email: <input type="email" name="emails" value="" required />
+                Tipo: <select required>
+                        <option value="opcion1">Reservar</option>
+                        <option value="opcion2">Sugerencia</option>
+                        <option value="opcion3">Consulta</option>
+                        <option value="opcion4">Reclamar</option>
+                      </select>   
+                Descripcion:<textarea name="comentario" id="" cols="30" rows="10" >  
                 </textarea>
-        Captcha<input id="confirmacion" type="text" name="captcha" value="" />
-        <input id="solucion" type="number" name="respuesta" value="" />
-        <button id="enviar">Enviar Formulario</button>
-    </form>
-
-    <p id="mensaje-de-comprobacion"></p>
-    <p id="mensaje-de-formulario-enviado"></p>
-
-    <section class="seccion-wsp">
-        <a href="https://envios.mercadolibre.com.ar/"><img src="./images/logos/mercadoenvios.png" alt="mercadoenvios"></a>
-        <a href="https://www.whatsapp.com/?lang=es"> <img src="./images/logos/logowhatsapp.png" alt="whatsapp"></a>
+                Captcha<input id="confirmacion" type="text" name="captcha" value=""/>
+                <input id="solucion" type="number"  name="respuesta" value=""/>
+                <button id="enviar">Enviar Formulario</button> 
+            </form>
+            
+            <p id="mensaje-de-comprobacion"></p>
+            <p id="mensaje-de-formulario-enviado"></p>
+            
+        </article>
     </section>
 
     <footer>
@@ -72,7 +77,7 @@
         <h4>© CamisetasRetro - Desarrollado por Thomas Barth y Lautaro Acosta</h4>
     </footer>
     
-    <script type="text/javascript" src="js/main-camiseta.js"></script>
+    <script type="text/javascript" src="js/generador-captcha.js"></script>
     <script src="js/boton-menu.js"></script>
 </body>
 

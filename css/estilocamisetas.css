@@ -178,13 +178,49 @@ tr {
 
 /*** ESTILO CONTACTOL.HTML ***/
 
-.seccion-wsp img {
-    width: 15%;
-    height: 15%;
+.caja-contacto img {
+    width: 8%;
+    height: 8%;
 }
 
-
-
+.opciones-lista{
+    list-style-position: inside;
+    list-style-type: square;
+    font-weight: bold;
+}
+.lista-contacto{
+    font-size: 20px;
+}
+.contenedor-contacto{
+    background-size: cover;
+    background-position: center;
+}
+.caja-contacto{
+    background-color:rgb(247, 245, 245);
+    width: 48%;
+    position: relative;
+    left: 25%;
+}
+form{
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: center;
+}
+textarea,input{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+    border-radius: 5%;
+}
+h2{
+    text-align: center;
+}
+#lilogo{
+    list-style-type: none;
+    text-align: center;
+}
 
 @media(width >= 768px) {
 
