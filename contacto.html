@@ -32,21 +32,25 @@
     <h2>Contacto</h2>
 
     <section class="contenedor-contacto">
-        
-        <main class="caja-contacto">
+    
+        <main>
             <ul class="lista-contacto">
-                <li class="opciones-lista">Para reservar,dar una sugerencia,hacer una consulta o reclamar complete el siguente formulario eligiendo la opcion deseada </li>
-                <li class="opciones-lista">Para realizar un pedido puede hacerlo mediante el formulario, llamando o mandando un mensaje a nuestro número </li>
-                <li class="opciones-lista">Tambien contamos con el servicio de Mercado Envios </li> 
-                <li class="opciones-lista">Para realizar una reserva se tiene que realizar con un minimo de 6hs de anticipacion</li>
-                <li id="lilogo"> <a href="https://www.whatsapp.com/?lang=es"> <img src="./images/logos/logowhatsapp.png" alt="whatsapp"></a> <a href="https://envios.mercadolibre.com.ar/"><img class="logo" src="./images/logos/mercadoenvios.png" alt="mercadoenvios"></a></li>
+                <li>Para reservar,dar una sugerencia,hacer una consulta o reclamar complete el siguente formulario eligiendo la opcion deseada </li>
+                <li>Para realizar un pedido puede hacerlo mediante el formulario, llamando o mandando un mensaje a nuestro número </li>
+                <li>Tambien contamos con el servicio de Mercado Envios </li> 
+                <li>Para realizar una reserva se tiene que realizar con un minimo de 6hs de anticipacion</li>
             </ul>
-        </main>
-        <article class="caja-contacto">
+            <!--<section class="logos-contacto">
+                <a id="link-wsp" href="https://www.whatsapp.com/?lang=es"><img src="./images/logos/logowhatsapp.png" alt="whatsapp"></a> 
+                <a id="link-me" href="https://envios.mercadolibre.com.ar/"><img class="logo" src="./images/logos/mercadoenvios.png" alt="mercadoenvios"></a>
+            </section> -->
+         </main>
+        
+        <article>
             <form id="formulario-contacto">
                 Nombre y Apellido:<input type="text" name="nombres" value="" required />
-                Teléfono: <input id="control-2" type="number" name="telefonos" value="" required/>
-                DNI: <input type="number" name="documentos" value="" required maxlength="8"/>
+                Teléfono: <input id="control-2" type="" name="telefonos" value="" required/>
+                DNI: <input type="" name="documentos" value="" required maxlength="8"/>
                 Email: <input type="email" name="emails" value="" required />
                 Tipo: <select required>
                         <option value="opcion1">Reservar</option>
@@ -57,7 +61,7 @@
                 Descripcion:<textarea name="comentario" id="" cols="30" rows="10" >  
                 </textarea>
                 Captcha<input id="confirmacion" type="text" name="captcha" value=""/>
-                <input id="solucion" type="number"  name="respuesta" value=""/>
+                <input id="solucion" type="" name="respuesta" value=""/>
                 <button id="enviar">Enviar Formulario</button> 
             </form>
             
