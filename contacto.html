@@ -15,9 +15,11 @@
         <div class="contenedor-logo-titulo-btn">
             <a href="index.html"><img class="logo-pag" src="./images/logos/logo.png"></a>
             <h1>CamisetasRetro</h1>
-            <button id="boton-menu"><img src="./images/iconos/icono-menu.png"></button>
+            <button id="boton-menu"></button>
         </div>
-
+        
+        <span id="btn-modo-oscuro"> <button><img src="./images/iconos/interruptor-modo-oscuro-claro.png"></button> </span>
+        
         <nav class="menu">
             <ul>
                 <li> <a href="index.html">Inicio</a> </li>
@@ -25,6 +27,7 @@
                 <li> <a href="contacto.html">Contacto</a> </li>         
             </ul>
         </nav>
+        
     </header>
 
     <img class="foto-d1eg0" src="./images/maradona.webp" alt="logo">
@@ -32,57 +35,61 @@
     <h2>Contacto</h2>
 
     <section class="contenedor-contacto">
-    
+
         <main>
             <ul class="lista-contacto">
-                <li>Para reservar,dar una sugerencia,hacer una consulta o reclamar complete el siguente formulario eligiendo la opcion deseada </li>
-                <li>Para realizar un pedido puede hacerlo mediante el formulario, llamando o mandando un mensaje a nuestro número </li>
-                <li>Tambien contamos con el servicio de Mercado Envios </li> 
+                <li>Para reservar,dar una sugerencia,hacer una consulta o reclamar complete el siguente formulario
+                    eligiendo la opcion deseada </li>
+                <li>Para realizar un pedido puede hacerlo mediante el formulario, llamando o mandando un mensaje a
+                    nuestro número </li>
+                <li>Tambien contamos con el servicio de Mercado Envios</li>
                 <li>Para realizar una reserva se tiene que realizar con un minimo de 6hs de anticipacion</li>
+                
+                <a href="https://www.whatsapp.com/?lang=es"><img src="./images/logos/logowhatsapp.png" alt="whatsapp"></a>
+                <a href="https://envios.mercadolibre.com.ar/"><img class="logo" src="./images/logos/mercadoenvios.png" alt="mercadoenvios"></a>
             </ul>
-            <!--<section class="logos-contacto">
-                <a id="link-wsp" href="https://www.whatsapp.com/?lang=es"><img src="./images/logos/logowhatsapp.png" alt="whatsapp"></a> 
-                <a id="link-me" href="https://envios.mercadolibre.com.ar/"><img class="logo" src="./images/logos/mercadoenvios.png" alt="mercadoenvios"></a>
-            </section> -->
-         </main>
-        
+        </main>
+
         <article>
-            <form id="formulario-contacto">
-                Nombre y Apellido:<input type="text" name="nombres" value="" required />
-                Teléfono: <input id="control-2" type="" name="telefonos" value="" required/>
-                DNI: <input type="" name="documentos" value="" required maxlength="8"/>
-                Email: <input type="email" name="emails" value="" required />
-                Tipo: <select required>
-                        <option value="opcion1">Reservar</option>
-                        <option value="opcion2">Sugerencia</option>
-                        <option value="opcion3">Consulta</option>
-                        <option value="opcion4">Reclamar</option>
-                      </select>   
-                Descripcion:<textarea name="comentario" id="" cols="30" rows="10" >  
+            <form>
+                Nombre y Apellido: <input type="text" name="nombres" value="" required>
+                Teléfono: <input type="" name="telefonos" value="" required>
+                DNI: <input type="" name="documentos" value="" required maxlength="8">
+                Email: <input type="email" name="emails" value="" required>
+                Tipo:
+                <select required>
+                    <option value="opcion1">Reservar</option>
+                    <option value="opcion2">Sugerencia</option>
+                    <option value="opcion3">Consulta</option>
+                    <option value="opcion4">Reclamar</option>
+                </select>
+                Descripcion:<textarea name="comentario" id="">
                 </textarea>
-                Captcha<input id="confirmacion" type="text" name="captcha" value=""/>
-                <input id="solucion" type="" name="respuesta" value=""/>
-                <button id="enviar">Enviar Formulario</button> 
+                Captcha:<input id="confirmacion" type="text" name="captcha" value="" />
+                <input id="solucion" type="" name="respuesta" value="" />
+                <button id="enviar">Enviar Formulario</button>
             </form>
-            
+
             <p id="mensaje-de-comprobacion"></p>
             <p id="mensaje-de-formulario-enviado"></p>
-            
+
         </article>
     </section>
 
     <footer>
         <h4>Nuestras redes sociales</h4>
         <section class="redes-sociales">
-            <a href="https://twitter.com/home?lang=es" target="_blank"><img src="./images/logos/logotwiter.png" alt="logotwiter"></a>
+            <a href="https://twitter.com/home?lang=es" target="_blank"><img src="./images/logos/logotwiter.png"
+                    alt="logotwiter"></a>
             <a href="https://www.instagram.com/"><img src="./images/logos/logoinsta.png" alt="logoinstagram"></a>
             <a href="https://www.facebook.com/"><img src="./images/logos/logofacebook.png" alt="logofacebook"> </a>
         </section>
         <h4>© CamisetasRetro - Desarrollado por Thomas Barth y Lautaro Acosta</h4>
     </footer>
-    
+
     <script type="text/javascript" src="js/generador-captcha.js"></script>
     <script src="js/boton-menu.js"></script>
+    <script src="js/cambiar-modo.js"></script>
 </body>
 
 </html>
