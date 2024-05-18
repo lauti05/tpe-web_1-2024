@@ -264,7 +264,30 @@ body.oscuro header, body.oscuro footer, body.oscuro #boton-menu, body.oscuro #bt
 
 /*** ESTILO GENERAL DESKTOP ***/
 
-    .menu.abrir > ul li {
+    header .contenedor-logo-titulo-btn {
+        justify-content: center;
+        
+    }   
+
+    #boton-menu {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        background-color: rgb(36, 34, 34);
+    }
+
+    .menu li {
+        list-style: none;
+    }
+
+    .menu > ul a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .menu > ul li {
         font-size: larger;
     }
 
