@@ -1,6 +1,6 @@
 /*** ESTILO GENERAL ***/
 
-body{
+body {
     background-color: rgba(127, 255, 212, 0.233);
     margin: 0;
 }
@@ -22,7 +22,7 @@ header .contenedor-logo-titulo-btn {
     flex-wrap: wrap;
 }
 
-header .contenedor-logo-titulo-btn h1{
+header .contenedor-logo-titulo-btn h1 {
     font-style: oblique;
 }
 
@@ -55,7 +55,6 @@ header, #boton-menu, #btn-modo-oscuro button {
 
 #btn-modo-oscuro img{
     width: 25px;
-    
 }
 
 .menu {
@@ -103,6 +102,8 @@ footer .redes-sociales img {
 }
 
 /*** FIN ESTILO GENERAL ***/
+
+
 
 
 
@@ -157,6 +158,8 @@ footer .redes-sociales img {
 
 
 
+
+
 /*** ESTILO PROMOCIONES.HTML ***/
 
 table {
@@ -189,13 +192,22 @@ tr {
     line-height: 1.7em
 }
 
+#lista-metodos-pago {
+    font-weight: bold;
+}
+
+#lista-metodos-pago li {
+    font-weight: normal;
+    font-style: italic;
+}
+
 /*** FIN ESTILO PROMOCIONES.HTML ***/
 
 
 
+
+
 /*** ESTILO CONTACTO.HTML ***/
-
-
 
 .contenedor-contacto {
     display: flex;
@@ -213,18 +225,28 @@ tr {
     width: 15%;
 }
 
+#captcha {
+    border: solid 1px;
+    text-align: center;
+}
+
+/*** FIN ESTILO CONTACTO.HTML ***/
+
+
+
+
 
 /*** MODO OSCURO ***/
 
-body.oscuro, body.oscuro .contenedor-camiseta{
+body.oscuro, body.oscuro .contenedor-camiseta {
     background-color: rgba(34, 31, 31, 0.973);
 }
 
-body.oscuro h2, body.oscuro p, body.oscuro #link-contacto-pie-de-pag, body.oscuro tbody, body.oscuro thead, body.oscuro .contenedor-contacto {
+body.oscuro h2, body.oscuro p, body.oscuro #link-contacto-pie-de-pag, body.oscuro tbody, body.oscuro thead, body.oscuro .contenedor-contacto, body.oscuro #lista-metodos-pago {
     color:rgb(236, 226, 226);
 }
 
-body.oscuro .contenedor-camiseta{
+body.oscuro .contenedor-camiseta {
     border-color: white;
 }
 
@@ -232,15 +254,17 @@ body.oscuro header, body.oscuro footer, body.oscuro #boton-menu, body.oscuro #bt
     background-color: #163136
 }
 
+/*** FIN MODO OSCURO ***/
+
+
 
 
 
 @media(width >= 768px) {
 
+/*** ESTILO GENERAL DESKTOP ***/
 
-/*** ESTILO GENERAL ***/
-
-    .menu.abrir > ul li{
+    .menu.abrir > ul li {
         font-size: larger;
     }
 
@@ -248,7 +272,7 @@ body.oscuro header, body.oscuro footer, body.oscuro #boton-menu, body.oscuro #bt
         align-items: center;
     }
     
-    footer > h4{
+    footer > h4 {
         margin-top: 5px;
     }
 
@@ -257,9 +281,12 @@ body.oscuro header, body.oscuro footer, body.oscuro #boton-menu, body.oscuro #bt
         margin-bottom: 5px;
     }
 
+/*** FIN ESTILO GENERAL DESKTOP ***/
 
 
-/*** ESTILO INDEX.HTML ***/
+
+
+/*** ESTILO INDEX.HTML DESKTOP ***/
 
     .contenedor-home {
         flex-direction: row;
@@ -267,16 +294,18 @@ body.oscuro header, body.oscuro footer, body.oscuro #boton-menu, body.oscuro #bt
         flex-wrap: wrap;
     }
 
-    .contenedor-camiseta{
+    .contenedor-camiseta {
         width: 20%;
     }
+
+/*** FIN ESTILO INDEX.HTML DESKTOP ***/
 
 
 
 
 /*** ESTILO PROMOCIONES.HTML ***/
 
-    table{
+    table {
         width: 90%;
         margin: auto;
         margin-bottom: 5px;
@@ -290,7 +319,7 @@ body.oscuro header, body.oscuro footer, body.oscuro #boton-menu, body.oscuro #bt
         width: 5%;
     }
 
-    .seccion-promociones h2{
+    .seccion-promociones h2 {
         font-size: xx-large;
     }
 
@@ -303,6 +332,9 @@ body.oscuro header, body.oscuro footer, body.oscuro #boton-menu, body.oscuro #bt
         height: 50%;
     }
 
+/*** FIN ESTILO PROMOCIONES.HTML DESKTOP ***/
+
+
 
 
 
@@ -313,22 +345,22 @@ body.oscuro header, body.oscuro footer, body.oscuro #boton-menu, body.oscuro #bt
         height: 8%;
     }
     
-    .opciones-lista{
+    .opciones-lista {
         list-style-position: inside;
         list-style-type: square;
         font-weight: bold;
     }
     
-    .lista-contacto{
+    .lista-contacto {
         font-size: 20px;
     }
     
-    .contenedor-contacto{
+    .contenedor-contacto {
         background-size: cover;
         background-position: center;
     }
     
-    .caja-contacto{
+    .caja-contacto {
         width: 48%;
         left: 25%;
     }
@@ -339,13 +371,13 @@ body.oscuro header, body.oscuro footer, body.oscuro #boton-menu, body.oscuro #bt
         align-items: center;
     }
     
-    form{
+    form {
         font-size: 20px;
         font-weight: bold;
         justify-content: center;
     }
     
-    textarea, input{
+    textarea, input {
         font-size: 20px;
         font-family: 'Times New Roman', Times, serif;
         display: flex;
@@ -354,11 +386,11 @@ body.oscuro header, body.oscuro footer, body.oscuro #boton-menu, body.oscuro #bt
         border-radius: 5%;
     }
     
-    h2{
+    h2 {
         text-align: center;
     }
     
-    #lilogo{
+    #lilogo {
         list-style-type: none;
         text-align: center;
     }
@@ -367,240 +399,6 @@ body.oscuro header, body.oscuro footer, body.oscuro #boton-menu, body.oscuro #bt
         width: 8%;
     }
 
+/*** FIN ESTILO CONTACTO.HTML DESKTOP ***/ 
+
 }
-    
-    /*.nombre-de-camisetas{
-        font-family:'Josefin Sans', sans-serif;
-
-    }
-
-    header{
-        display: flex;
-        position: sticky; 
-        top: 0; 
-        flex-wrap: wrap;
-        justify-content: space-around;
-        background-color:#ffffff;
-        z-index: 3;
-    }
-
-    .navegador{
-        display: none;
-        flex-direction: column;
-        background-color:#000000;
-        border-bottom: 5px solid rgb(2, 2, 2);
-        padding-left: 0;
-        flex-wrap: wrap;
-    }
-
-    .navegador.mostrar{
-        display: flex;
-    }
-    
-    .item {
-        list-style: none;
-        margin: 0px 30px;
-        color: rgb(255, 255, 255);
-        text-transform: uppercase;
-        padding: 15px;
-    }
-    
-    .item:hover {
-        background: rgb(255, 255, 255);
-    }
-    .contenedor-home{
-        background-image: url(../images/logo_nike.jpg);
-        background-size: cover;
-        background-position: center;
-    }
-    .oferta{ 
-        flex-wrap: wrap;
-        width: 48%;
-        display: inline-block;
-        justify-content: center;
-        background-color: rgba(255, 255, 255, 255);
-        position: relative;
-        left: 25%;
-        
-    }
-    .titulo-de-primernivel{ 
-        border-bottom: 5px solid rgb(255, 255, 255);
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        text-align: center;
-        color: black;
-
-    }
-    .descripcion{
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
-        text-align: center;
-        color: rgb(0, 0, 0);
-        
-        
-    }
-    .caja-promocion-o-contacto{
-        background-color:rgb(247, 245, 245);
-        width: 48%;
-        position: relative;
-        left: 25%;
-    }
-    .theadpromocion{
-
-        color: rgb(0, 0, 0);
-        font-family: Georgia, 'Times New Roman', Times, serif;
-    }
-    
-    .tbodypromocion{
-        color: rgb(8, 8, 8);
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bold;
-    }
-    .tabla table{
-        width: 75%;
-        border-collapse: collapse;
-        border: 2px solid #1d1d1d;
-    }
-    .tabla thead{
-        background-color: #cfffa211 ;
-        font-size: 100%;
-    }
-    .tabla table thead tr th{
-        padding: 10px;
-        align-items: center;
-    }
-    .tabla table tbody tr td{
-        padding: 10px;
-        text-align: center;
-    }
-    tr,th,td{
-        border: #1d1d1d 2px solid;
-    }
-    .tabla form input{
-        width: auto;
-    }
-    .tabla form button{
-        background-color: transparent;
-        padding: 5px;
-        font-size: 20px;
-        color:#000000 ;
-        border: 2px solid #000000;
-        border-radius: 15px ;
-        display: block;
-        margin: 10px;
-    }
-    .tabla form button:hover{
-    background-color: #080808;
-    color: #425c5a;
-    border:2px solid #425c5a;
-    }
-    .avisos{
-
-        width: 48%;
-        text-align: center;
-        position: relative;
-        left: 25%;
-
-    }
-
-
-    .logo{
-        width: 50px;
-        height: 50px;
-    }
-    footer{
-        text-align: center;
-        position: sticky;
-        bottom: 0;
-        background-color:#ffffff;
-        opacity: 80%;
-        height: 5%;
-    }
-
-    .titulo{
-        flex-wrap: wrap;
-        text-align: center;
-        color: rgb(0, 0, 0);
-    }
-
-    #resaltado{
-        background-color: rgba(0, 0, 0, 0.6);
-    }
-
-    a{
-        text-decoration:none;
-    }
-
-    .contenedor-contacto{
-        background-image: url(../images/logo_nike.jpg);
-        background-size: cover;
-        background-position: center;
-    }
-
-    .lista-de-opciones-de-contacto{
-        font-size: 20px;
-    }
-
-    .opciones-lista{
-        list-style-position: inside;
-        list-style-type: square;
-        font-weight: bold;
-    }
-
-    form{
-        font-size: 20px;
-        font-weight: bold;
-        justify-content: center;
-        
-    }
-    textarea,input{
-        font-size: 20px;
-        font-family: 'Times New Roman', Times, serif;
-        display: flex;
-        flex-wrap: wrap;
-        margin: 5px;
-        border-radius: 5%;
-
-    }
-    select{
-        display: flex;
-        font-size: 15px;
-        flex-wrap: wrap;
-    }
-    #lilogo{
-        list-style-type: none;
-        text-align: center;
-    }
-    input:hover{
-        background: rgb(255, 255, 255);
-    }
-    article{
-        background-color:#ffffff;
-    }
-    section{
-        justify-content: space-between;
-        text-align: center;
-    }
-    .imagen-carta{
-        text-align: center;
-        width: 40%;
-        height: 40%;
-    }
-    .titulo-de-segundonivel{
-        font-family:Verdana, Geneva, Tahoma, sans-serifs;
-        text-align: center;
-        color: rgb(0, 0, 0);
-        
-    }
-
-
-    .boton-menu{
-        display: none;
-    }
-
-    .navegador{
-        flex-direction: row;
-        display: flex;
-    }*/
-
-
-

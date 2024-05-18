@@ -30,7 +30,7 @@
         
     </header>
 
-    <img class="foto-d1eg0" src="./images/maradona.webp" alt="logo">
+    <img class="foto-d1eg0" src="./images/banner-maradona.webp" alt="logo">
 
     <h2>Contacto</h2>
 
@@ -38,12 +38,12 @@
 
         <main>
             <ul class="lista-contacto">
-                <li>Para reservar,dar una sugerencia,hacer una consulta o reclamar complete el siguente formulario
-                    eligiendo la opcion deseada </li>
+                <li>Para reservar, dar una sugerencia, hacer una consulta o reclamar complete el siguente formulario
+                    eligiendo la opción deseada </li>
                 <li>Para realizar un pedido puede hacerlo mediante el formulario, llamando o mandando un mensaje a
                     nuestro número </li>
-                <li>Tambien contamos con el servicio de Mercado Envios</li>
-                <li>Para realizar una reserva se tiene que realizar con un minimo de 6hs de anticipacion</li>
+                <li>También contamos con el servicio de Mercado Envios</li>
+                <li>Para realizar una reserva se debe hacer con un mínimo de 6hs de anticipación</li>
                 
                 <a href="https://www.whatsapp.com/?lang=es"><img src="./images/logos/logowhatsapp.png" alt="whatsapp"></a>
                 <a href="https://envios.mercadolibre.com.ar/"><img class="logo" src="./images/logos/mercadoenvios.png" alt="mercadoenvios"></a>
@@ -51,27 +51,29 @@
         </main>
 
         <article>
-            <form>
+            <form id="formulario-contacto">
                 Nombre y Apellido: <input type="text" name="nombres" value="" required>
-                Teléfono: <input type="" name="telefonos" value="" required>
-                DNI: <input type="" name="documentos" value="" required maxlength="8">
-                Email: <input type="email" name="emails" value="" required>
+                Teléfono: <input type="tel" name="telefono" value="" required>
+                DNI: <input type="text" name="documento" value="" minlength="8" maxlength="8"> <!--pattern-->
+                Email: <input type="email" name="email" value="" required>
                 Tipo:
-                <select required>
-                    <option value="opcion1">Reservar</option>
-                    <option value="opcion2">Sugerencia</option>
-                    <option value="opcion3">Consulta</option>
-                    <option value="opcion4">Reclamar</option>
+                <select>
+                    <option value="">Reserva</option>
+                    <option value="">Sugerencia</option>
+                    <option value="">Consulta</option>
+                    <option value="">Reclamo</option>
                 </select>
-                Descripcion:<textarea name="comentario" id="">
-                </textarea>
-                Captcha:<input id="confirmacion" type="text" name="captcha" value="" />
-                <input id="solucion" type="" name="respuesta" value="" />
+                Descripcion:<textarea name="comentario" required></textarea>
+                Captcha: <p id="captcha"></p>
+                <input id="rta-captcha" type="" name="respuesta" value="" required>
                 <button id="enviar">Enviar Formulario</button>
             </form>
 
+            
+
             <p id="mensaje-de-comprobacion"></p>
-            <p id="mensaje-de-formulario-enviado"></p>
+
+            <p id="mensaje-de-formulario-enviado"></p> <!--hacer script-->
 
         </article>
     </section>

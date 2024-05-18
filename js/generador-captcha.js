@@ -1,22 +1,26 @@
 "use strict";
 
-console.log("Bienvenido");
+//Genero el captcha 
+let nro_random = Math.floor((Math.random() * 90000) + 10000);
+let captcha = document.querySelector("#captcha");
+captcha.innerHTML = nro_random;
 
-//Declaro variables
-let random = Math.floor((Math.random()*90000)+10000);
+//Añado el event listener para cuando se envie el formulario
 let form_contacto = document.querySelector("#formulario-contacto");
 form_contacto.addEventListener('submit', validar);
-let captcha = document.querySelector("#confirmacion");
-captcha.value = random;
-let solucion = document.querySelector("#solucion");
 
-// funcion para validar formulario
+//Valido el captcha
 function validar(e) {
-    e.preventDefault();
-    if(captcha.value === solucion.value){
-        document.querySelector("#mensaje-de-comprobacion").innerHTML = "Captcha valido";
+    let respuesta = document.querySelector("#rta-captcha");
+    e.preventDefault(); //para que no se refresque la pagina
+
+
+    if(captcha.innerHTML === respuesta.value.toString()){ //convertimos respuesta a string para la comparacion porque no pudimos convertir captcha.innerHTML a number y que ande bien
+        document.querySelector("#mensaje-de-comprobacion").innerHTML = "Captcha válido";
     }
     else{
-        document.querySelector("#mensaje-de-comprobacion").innerHTML = "Captcha invalido";
+        document.querySelector("#mensaje-de-comprobacion").innerHTML = "Captcha inválido";
     }
+
 }
+
