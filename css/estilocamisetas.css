@@ -13,12 +13,15 @@ body {
 header {
     position: sticky;
     top: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
 }
 
 header .contenedor-logo-titulo-btn {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
@@ -41,7 +44,6 @@ header, #boton-menu, #btn-modo-oscuro {
 }
 
 #btn-modo-oscuro {
-    margin-left: 50%; /* centramos el boton con los margenes para no usar un div o un span */
     border-style: none
 }
 
@@ -258,8 +260,7 @@ body.oscuro header, body.oscuro footer, body.oscuro #boton-menu, body.oscuro #bt
 
     header .contenedor-logo-titulo-btn {
         justify-content: center;
-        
-    }   
+    }
 
     #boton-menu {
         display: none;
