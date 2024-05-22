@@ -18,7 +18,7 @@
             <button id="boton-menu"></button>
         </div>
         
-        <span id="btn-modo-oscuro"> <button><img src="./images/iconos/interruptor-modo-oscuro-claro.png"></button> </span>
+        <button id="btn-modo-oscuro"><img src="./images/iconos/interruptor-modo-oscuro-claro.png"></button>
         
         <nav class="menu">
             <ul>
@@ -27,7 +27,6 @@
                 <li> <a href="contacto.html">Contacto</a> </li>         
             </ul>
         </nav>
-        
     </header>
 
     <img class="foto-d1eg0" src="./images/banner-maradona.webp" alt="logo">
@@ -39,9 +38,9 @@
         <main>
             <ul class="lista-contacto">
                 <li>Para reservar, dar una sugerencia, hacer una consulta o reclamar complete el siguente formulario
-                    eligiendo la opción deseada </li>
+                    eligiendo la opción deseada</li>
                 <li>Para realizar un pedido puede hacerlo mediante el formulario, llamando o mandando un mensaje a
-                    nuestro número </li>
+                    nuestro número</li>
                 <li>También contamos con el servicio de Mercado Envios</li>
                 <li>Para realizar una reserva se debe hacer con un mínimo de 6hs de anticipación</li>
                 
@@ -54,7 +53,7 @@
             <form id="formulario-contacto">
                 Nombre y Apellido: <input type="text" name="nombres" value="" required>
                 Teléfono: <input type="tel" name="telefono" value="" required>
-                DNI: <input type="text" name="documento" value="" minlength="8" maxlength="8"> <!--pattern-->
+                DNI: <input type="text" name="documento" value="" minlength="8" maxlength="8" pattern="^[0-9]+"> 
                 Email: <input type="email" name="email" value="" required>
                 Tipo:
                 <select>
@@ -65,31 +64,28 @@
                 </select>
                 Descripcion:<textarea name="comentario" required></textarea>
                 Captcha: <p id="captcha"></p>
-                <input id="rta-captcha" type="" name="respuesta" value="" required>
+                <input id="rta-captcha" type="" name="respuesta" value="" required autocomplete="off">
                 <button id="enviar">Enviar Formulario</button>
-            </form>
-
-            
+            </form>  
 
             <p id="mensaje-de-comprobacion"></p>
-
-            <p id="mensaje-de-formulario-enviado"></p> <!--hacer script-->
-
         </article>
     </section>
 
     <footer>
         <h4>Nuestras redes sociales</h4>
+
         <section class="redes-sociales">
             <a href="https://twitter.com/home?lang=es" target="_blank"><img src="./images/logos/logotwiter.png"
                     alt="logotwiter"></a>
             <a href="https://www.instagram.com/"><img src="./images/logos/logoinsta.png" alt="logoinstagram"></a>
             <a href="https://www.facebook.com/"><img src="./images/logos/logofacebook.png" alt="logofacebook"> </a>
         </section>
+
         <h4>© CamisetasRetro - Desarrollado por Thomas Barth y Lautaro Acosta</h4>
     </footer>
 
-    <script type="text/javascript" src="js/generador-captcha.js"></script>
+    <script src="js/generador-captcha.js"></script>
     <script src="js/boton-menu.js"></script>
     <script src="js/cambiar-modo.js"></script>
 </body>

@@ -18,7 +18,7 @@ header {
 header .contenedor-logo-titulo-btn {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -26,7 +26,7 @@ header .contenedor-logo-titulo-btn h1 {
     font-style: oblique;
 }
 
-header, #boton-menu, #btn-modo-oscuro button {
+header, #boton-menu, #btn-modo-oscuro {
     background-color: #447179;
 }
 
@@ -37,19 +37,11 @@ header, #boton-menu, #btn-modo-oscuro button {
     background-image: url(../images/iconos/icono-menu.png);
     background-repeat: no-repeat;
     background-size: 100%;
+    background-position: center;
 }
 
-#boton-menu > img {
-    width: 120%;
-    height: 115%;
-}
-
- #btn-modo-oscuro {
-    display: flex;
-    justify-content: center;
- }
-
-#btn-modo-oscuro button {
+#btn-modo-oscuro {
+    margin-left: 50%; /* centramos el boton con los margenes para no usar un div o un span */
     border-style: none
 }
 
@@ -250,7 +242,7 @@ body.oscuro .contenedor-camiseta {
     border-color: white;
 }
 
-body.oscuro header, body.oscuro footer, body.oscuro #boton-menu, body.oscuro #btn-modo-oscuro button {
+body.oscuro header, body.oscuro footer, body.oscuro #boton-menu, body.oscuro #btn-modo-oscuro {
     background-color: #163136
 }
 
