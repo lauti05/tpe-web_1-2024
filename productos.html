@@ -31,12 +31,22 @@
     <form id="form-compra"> <!--agregar labels-->
         <div class="compra">
             <img src="./images/camisetas/argentina94.png"> 
-            <div class="especificiones-compra">
+            <div class="especificaciones-compra">
+                
+                Camiseta
+                <select name="camisetas">
+                    <option>Argentina '94</option>
+                    <option>Batistuta - Fiorentina</option>
+                    <option>Boca '97</option>
+                    <!--completar-->
+                </select>
+                
                 Cantidad <input type="number">
+                
                 Talle 
                 <select>
-                    <option value="">XL</option>
-                    <option value="">L</option>
+                    <option>XL</option>
+                    <option>L</option>
                 </select>     
             </div>
         </div>  
@@ -56,5 +66,7 @@
     </footer>
     
     <script src="js/boton-menu.js"></script>
+    <script src="./js/cambiar-modo.js"></script>
+    <script src="./js/mostrar-camiseta.js"></script>
 </body>
 </html>

@@ -155,20 +155,6 @@ footer .redes-sociales img {
 
 /*** ESTILO PRODUCTOS.HTML ***/
 
-.compra {
-    display: flex;
-    align-items: center;
-}
-
-.compra.especificiones-compra {
-    display: flex;
-    flex-direction: column;
-}
-
-.compra > img {
-    width: 30%;
-    height: 30%;
-}
 
 /*** FIN ESTILO PRODUCTOS.HTML ***/
 
@@ -288,22 +274,32 @@ body.oscuro header, body.oscuro footer, body.oscuro #boton-menu, body.oscuro #bt
         display: none;
     }
 
-    .menu { /* modificar para poner en horizontal */
-        display: flex;
+    .menu {
+        display: block;
         background-color: rgb(36, 34, 34);
     }
 
-    .menu li {
-        list-style: none;
+    .menu > ul {
+        display: flex;
+        justify-content: start;
+        column-gap: 10px;
+        flex-wrap: wrap;
     }
 
-    .menu > ul a {
+    .menu > ul > li > a {
         text-decoration: none;
         color: white;
     }
     
-    .menu > ul li {
+    .menu > ul > li {
+        display: flex;
+        list-style: none;
         font-size: larger;
+    }
+
+    .menu > ul > li > a:hover {
+        background-color: white;
+        color: black;
     }
 
     footer {
@@ -337,6 +333,31 @@ body.oscuro header, body.oscuro footer, body.oscuro #boton-menu, body.oscuro #bt
     }
 
 /*** FIN ESTILO INDEX.HTML DESKTOP ***/
+
+
+
+
+/*** ESTILO PRODUCTOS.HTML DESKTOP ***/
+.compra {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.compra > img {
+    width: 15%;
+    height: 15%;
+}
+
+.especificaciones-compra {
+    display: flex;
+    flex-direction: column;
+    font-weight: normal;
+    font-size: medium;
+}
+
+/*** FIN ESTILO PRODUCTOS DESKTOP ***/
 
 
 

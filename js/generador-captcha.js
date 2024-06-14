@@ -11,18 +11,7 @@ form_contacto.addEventListener('submit', validar_captcha);
 
 //Valido el captcha
 function validar_captcha(e) {
-    /*let respuesta = document.querySelector("#rta-captcha");
-    e.preventDefault(); //para que no se refresque la pagina
-
-
-    if(captcha.innerHTML === respuesta.value.toString()){ //convertimos respuesta a string para la comparacion porque no pudimos convertir captcha.innerHTML a number y que ande bien
-        document.querySelector("#mensaje-de-comprobacion").innerHTML = "Captcha válido";
-    }
-    else{
-        document.querySelector("#mensaje-de-comprobacion").innerHTML = "Captcha inválido";
-    }*/
-
-    e.preventDefault();
+    e.preventDefault(); //Para que no se refresque la pagina
     let data_formulario = new FormData(form_contacto);
 
     let rta_captcha = parseInt(data_formulario.get("rta-captcha"));
@@ -33,8 +22,5 @@ function validar_captcha(e) {
     else{
         document.querySelector("#mensaje-de-comprobacion").innerHTML = "Captcha inválido";
     }
-
-
-    
 }
 
