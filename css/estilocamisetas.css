@@ -153,6 +153,28 @@ footer .redes-sociales img {
 
 
 
+/*** ESTILO PRODUCTOS.HTML ***/
+
+.compra {
+    display: flex;
+    align-items: center;
+}
+
+.compra.especificiones-compra {
+    display: flex;
+    flex-direction: column;
+}
+
+.compra > img {
+    width: 30%;
+    height: 30%;
+}
+
+/*** FIN ESTILO PRODUCTOS.HTML ***/
+
+
+
+
 
 /*** ESTILO PROMOCIONES.HTML ***/
 
@@ -266,7 +288,7 @@ body.oscuro header, body.oscuro footer, body.oscuro #boton-menu, body.oscuro #bt
         display: none;
     }
 
-    .menu {
+    .menu { /* modificar para poner en horizontal */
         display: flex;
         background-color: rgb(36, 34, 34);
     }
