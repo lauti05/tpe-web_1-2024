@@ -1,40 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/estilocamisetas.css">
 </head>
+
 <body>
-    <header>    
+    <header>
         <div class="contenedor-logo-titulo-btn">
             <a href="index.html"><img class="logo-pag" src="./images/logos/logo.png"></a>
             <h1>CamisetasRetro</h1>
             <button id="boton-menu"></button>
         </div>
-        
-        <button id="btn-modo-oscuro"><img src="./images/iconos/interruptor-modo-oscuro-claro.png"></button> 
-        
+
+        <button id="btn-modo-oscuro"><img src="./images/iconos/interruptor-modo-oscuro-claro.png"></button>
+
         <nav class="menu">
             <ul>
                 <li> <a href="index.html">Inicio</a> </li>
                 <li> <a href="productos.html">Productos</a> </li>
-                <li> <a href="promociones.html">Promociones</a> </li> 
+                <li> <a href="promociones.html">Promociones</a> </li>
                 <li> <a href="carrito.html">Carrito</a> </li>
-                <li> <a href="contacto.html">Contacto</a> </li>                        
+                <li> <a href="contacto.html">Contacto</a> </li>
             </ul>
-        </nav>       
+        </nav>
     </header>
 
-    <table>
-        TABLA
+    <h2 id="msj-error"></h2>
+
+    <table id="carrito">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Talle</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpo-tabla-carrito">
+
+        </tbody>
     </table>
+
+    <button id="btn-modificar">Modificar Compra</button>
+    <button id="btn-eliminar">Eliminar ultimo</button>
+
+    <form class="form-modificar">
+        <select name="opc-carrito">
+        </select>
+        <input name="cantidad" type="number"> Cantidad
+        <select name="talle">
+            <option>XL</option>
+            <option>L</option>
+            <option>XL</option>
+        </select>talle
+    </form>
+
+    <h4>Métodos de pago:</h4>
+    <ul id="lista-metodos-pago"> 
+        <li>
+            Tarjeta de débito
+        </li>
+        <li>
+            Tarjeta de crédito
+        </li>
+        <li>
+            Transferencia
+        </li>
+        <li>
+            Efectivo
+        </li>
+    </ul>
 
     <footer>
         <h4>Nuestras redes sociales</h4>
         <section class="redes-sociales">
-            <a href="https://twitter.com/home?lang=es" target="_blank"><img src="./images/logos/logotwiter.png" alt="logotwiter"></a>
+            <a href="https://twitter.com/home?lang=es" target="_blank"><img src="./images/logos/logotwiter.png"
+                    alt="logotwiter"></a>
             <a href="https://www.instagram.com/"><img src="./images/logos/logoinsta.png" alt="logoinstagram"></a>
             <a href="https://www.facebook.com/"><img src="./images/logos/logofacebook.png" alt="logofacebook"> </a>
         </section>
@@ -43,5 +87,7 @@
 
     <script src="./js/boton-menu.js"></script>
     <script src="./js/cambiar-modo.js"></script>
+    <script src="./js/servicio-rest.js"></script>
 </body>
+
 </html>

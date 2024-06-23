@@ -27,26 +27,35 @@
         </nav>       
     </header>
 
+    <h2>Elegí tu modelo favorito</h2>
 
     <form id="form-compra"> <!--agregar labels-->
         <div class="compra">
-            <img src="./images/camisetas/argentina94.png"> 
-            <div class="especificaciones-compra">
-                
-                Camiseta
-                <select name="camisetas">
+            <img id="img-camiseta" src="./images/camisetas/argentina94.png"> 
+            <div class="especificaciones-compra">                
+                Modelo
+                <select name="opc-camisetas" id="sel-camisetas">
                     <option>Argentina '94</option>
                     <option>Batistuta - Fiorentina</option>
                     <option>Boca '97</option>
-                    <!--completar-->
+                    <option>Independiente '97/'98</option>
+                    <option>Kaka - Milan</option>
+                    <option>Racing '91</option>
+                    <option>Riquelme - Villareal</option>
+                    <option>River '96</option>
+                    <option>Ronaldinho - Barcelona</option>
+                    <option>Ronaldo - Brasil</option>
+                    <option>San Lorenzo '85</option>
+                    <option>Zidane - Francia</option>
                 </select>
                 
-                Cantidad <input type="number">
+                Cantidad <input type="number" required name="cantidad" min="1">
                 
                 Talle 
-                <select>
+                <select name="talle">
                     <option>XL</option>
                     <option>L</option>
+                    <option>S</option>
                 </select>     
             </div>
         </div>  
@@ -68,5 +77,6 @@
     <script src="js/boton-menu.js"></script>
     <script src="./js/cambiar-modo.js"></script>
     <script src="./js/mostrar-camiseta.js"></script>
+    <script src="./js/servicio-rest.js"></script>
 </body>
 </html>
