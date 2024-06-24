@@ -1,18 +1,11 @@
 "use strict"
 
 const URL = 'https://666c7e1549dbc5d7145e31b5.mockapi.io/camiseta/';
-let carrito = [];
 
 //ni bien carga el sitio busco las camisetas
 obtener_carrito();
 
-let btn_modificar = document.querySelector("#btn-modificar");
-btn_modificar.addEventListener("click", recuperar_id);
-
-let btn_eliminar = document.querySelector("#btn-eliminar");
-btn_eliminar.addEventListener("click",  eliminar_ult_compra)
-
-//obtengo los camisetas del servicio
+//funcion asincrona para obtener los productos del carrito (GET)
 async function obtener_carrito() { //ver nombre para variable promesa
     try {
         let promesa = await fetch(URL); //por defecto fetch tiene el metodo GET asi que no lo especifico
@@ -20,14 +13,100 @@ async function obtener_carrito() { //ver nombre para variable promesa
         if (promesa.ok) {
             let camisetas = await promesa.json();
             mostrar_carrito(camisetas);
-            carrito = camisetas;
         }
         else{
             throw new Error('Response not ok');
         }
     } 
-    catch (promesa) {
-       document.querySelector("#msj-error").innerHTML = "Error al cargar el carrito";
+    catch {
+        throw new Error('Error obteniendo el carrito');
+    }
+}
+
+//modifico el html para imprimir la tabla que simula ser el carrito 
+function mostrar_carrito(productos){
+    document.querySelector(".msj-exito").innerHTML = "";
+    let tabla_carrito = document.querySelector("#cuerpo-tabla-carrito");
+    tabla_carrito.innerHTML = '';
+    for (const item of productos) { //imprimo los productos y agrego codigo html para modificar y eliminar cada elemento de la tabla
+        tabla_carrito.innerHTML += "<tr>" +   
+                                            "<td>" + item.nombre + "</td>" + 
+                                            "<td>" + item.talle + "</td>" +
+                                            "<td>" + item.cantidad + "</td>" +
+                                            "<td>" + 
+                                                "<button name='"+ item.id + "'" + " class='btn-eliminar'>Eliminar</button>" +
+                                            "</td>"+
+                                           "<td>"+    
+                                                "<form id='form-modif' name='"+ item.id + "'" + ">" +
+                                                    "</select>"+
+                                                    "Talle <select name='talle'>"+
+                                                       "<option>XL</option>"+
+                                                        "<option>L</option>"+
+                                                        "<option>S</option>"+
+                                                   "</select>"+
+                                                    "Cantidad <input name='cantidad' type='number' min='1' required>"+
+                                                    "<input type='submit' class='form-eliminar' value='Modificar'>"+
+                                                "</form>"
+                                            "</td>" + 
+                                    "</tr>";       
+    }
+
+
+//agrego eventListeners a cada uno de los botones para eliminar y modificar
+    let botones_eliminar = document.querySelectorAll(".btn-eliminar");
+    for (const boton of botones_eliminar)
+        boton.addEventListener("click", eliminar_compra);
+
+    let forms_modificar = document.querySelectorAll("#form-modif")
+    for (const formulario of forms_modificar){
+        formulario.addEventListener("submit", modificar_compra);
+    }
+}
+
+//funcion asincrona para eliminar un producto (DELETE)
+async function eliminar_compra(e) {
+    e.preventDefault();
+    let id = e.target.getAttribute("name");
+    try {
+        let promesa = await fetch(URL+id, {method: 'DELETE'});
+
+        if(promesa.ok){
+            obtener_carrito();
+            document.querySelector(".msj-exito").innerHTML = "Producto eliminado"
+        }
+        else{
+            throw new Error('Response not ok');
+        }
+    }
+    catch{
+        throw new Error('Error eliminando compra');
+    }
+}
+
+//funcion asincrona para modificar un producto (PUT)
+async function modificar_compra(e) {
+    e.preventDefault();
+
+    let id = e.target.getAttribute("name");
+
+    let datos_modif = new FormData(e.target);
+    let compra_nueva = {
+        cantidad: datos_modif.get("cantidad"),
+        talle: datos_modif.get("talle")
+    };
+
+    try {
+        let promesa = await fetch(URL+id, {
+            method: 'PUT',
+            headers: {"Content-Type": 'application/json'},
+            body: JSON.stringify(compra_nueva)
+        });
+        if (promesa.ok) {
+            obtener_carrito();
+        }
+    }
+    catch{
+        throw new Error('Error modificando compra');
     }
 }
 
@@ -35,8 +114,7 @@ async function obtener_carrito() { //ver nombre para variable promesa
 let form_compra = document.querySelector("#form-compra"); 
 form_compra.addEventListener('submit', agregar_compra); 
 
-
-//funcion asincrona para agregar una camiseta al carrito
+//funcion asincrona para agregar una camiseta al carrito (POST)
 async function agregar_compra(e) {
     e.preventDefault(); //para q no se recargue la pagina
 
@@ -44,7 +122,7 @@ async function agregar_compra(e) {
 
     let compra = { //creo un json con los datos del form
         nombre: datos_compra.get("opc-camisetas"),
-        cantidad: parseInt(datos_compra.get("cantidad")),
+        cantidad: datos_compra.get("cantidad"),
         talle: datos_compra.get("talle")
     };
 
@@ -54,72 +132,16 @@ async function agregar_compra(e) {
             headers: {"Content-Type": 'application/json'},
             body: JSON.stringify(compra)
         });
+        
+        if (promesa.ok){
+            document.querySelector(".msj-exito"). innerHTML = "Añadido al <a href='carrito.html'>carrito</a>";
+        }else{
+            throw new Error('Response not ok');
+        }
+
 
     }
     catch{
         throw new Error('Error agregando compra');
-    }
-}
-
-async function eliminar_ult_compra(){
-    let ultimo = carrito.length-1;
-    let id = (carrito[ultimo].id).toString();
-    try {
-        let promesa = await fetch(URL+id, {method: 'DELETE'});
-    }
-    catch{
-        throw new Error('Error eliminando compra');
-    }
-}
-
-function recuperar_id(){
-    let id_borrar = -1;
-    let form_modificar = document.querySelector(".form-modificar");
-    form_modificar.classList.toggle('mostrar');
-
-    let datos_form = new FormData(form_modificar);
-
-    for (const item of carrito){
-        document.querySelector("#opc-carrito").innerHTML += "<option>"+item.nombre+"</option>";
-        /*if (datos_form.get("opc-carrito") === item.id)
-            id_borrar = item.id;*/
-    }       
-    
-
-    let nueva_compra = {nombre: datos_form.get("opc-carrito"),
-        cantidad: datos_form.get("cantidad"),
-        talle: datos_form.get("talle")
-    };
-    
-    modificar_compra(id_borrar, nueva_compra);
-
-}
-
-async function modificar_compra(id, compra_modif){
-
-    try {
-        let promesa = await fetch(URL, {
-            method: 'POST',
-            headers: {"Content-Type": 'application/json'},
-            body: JSON.stringify(compra_modif)
-        });
-
-    }
-    catch{
-        throw new Error('Error modificando compra');
-    }
-}
-
-//modifico el html para imprimir la tabla que simula el carrito
-function mostrar_carrito(productos){
-    let tabla_carrito = document.querySelector("#cuerpo-tabla-carrito");
-    tabla_carrito.innerHTML = '';
-    for (const item of productos) {
-        tabla_carrito.innerHTML += "<tr>" +   
-                                            "<td>" + item.nombre + "</td>" + 
-                                            "<td>" + item.talle + "</td>" +
-                                            "<td>" + item.cantidad + "</td>" +
-                                    "</tr>";
-        
     }
 }

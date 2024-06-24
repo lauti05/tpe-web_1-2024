@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nuestros Productos</title>
     <link rel="stylesheet" href="./css/estilocamisetas.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
 
     <h2>Elegí tu modelo favorito</h2>
 
-    <form id="form-compra"> <!--agregar labels-->
+    <form id="form-compra"> 
         <div class="compra">
             <img id="img-camiseta" src="./images/camisetas/argentina94.png"> 
             <div class="especificaciones-compra">                
@@ -47,10 +47,8 @@
                     <option>Ronaldo - Brasil</option>
                     <option>San Lorenzo '85</option>
                     <option>Zidane - Francia</option>
-                </select>
-                
-                Cantidad <input type="number" required name="cantidad" min="1">
-                
+                </select>                
+                Cantidad <input type="number" required name="cantidad" min="1">               
                 Talle 
                 <select name="talle">
                     <option>XL</option>
@@ -59,10 +57,10 @@
                 </select>     
             </div>
         </div>  
-   
         <input type="submit" value="Añadir al carrito">
     </form>
 
+    <h3 class="msj-exito"></h3>
 
     <footer>
         <h4>Nuestras redes sociales</h4>
@@ -74,7 +72,7 @@
         <h4>© CamisetasRetro - Desarrollado por Thomas Barth y Lautaro Acosta</h4>
     </footer>
     
-    <script src="js/boton-menu.js"></script>
+    <script src="./js/boton-menu.js"></script>
     <script src="./js/cambiar-modo.js"></script>
     <script src="./js/mostrar-camiseta.js"></script>
     <script src="./js/servicio-rest.js"></script>

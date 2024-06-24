@@ -59,13 +59,22 @@ header, #boton-menu, #btn-modo-oscuro {
     background-color: rgb(36, 34, 34);
 }
 
-.menu.abrir li {
+.menu.abrir > ul > li {
     list-style: none;
-}
-
-.menu.abrir > ul a {
     text-decoration: none;
     color: white;
+}
+
+.msj-exito{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(60, 209, 60)
+}
+
+.msj-exito a {
+    text-decoration: underline;
+    font-style: oblique;
+    color: rgb(60, 209, 60)
 }
 
 footer {
@@ -228,25 +237,28 @@ footer .redes-sociales img {
 #carrito {
     border-collapse: collapse;
     margin-top: 10px;
-    width: 100%;
+    margin-bottom: 100%;
 }
 
-#carrito td, #carrito tr {
-    border: solid 1px;
+#carrito tr {
     text-align: center;
+    border-bottom: solid 1px;
 }
 
-#carrito thead tr, #col-editar-prod{
-    border: none;
+#carrito td {
+    width: 15%;
 }
 
-.form-modificar {
-    display: none;
+#form-modif {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.form-modificar.mostrar {
-    display: block;
+#form-modif input, #form-modif select {
+    width: fit-content;
 }
+
 
 #lista-metodos-pago {
     display: flex;
